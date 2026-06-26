@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMTV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" data-route="home" aria-label="CMTV inicio"><img src="imagenes/Logo.png" alt="CMTV" /></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Navegacion principal">
+      <a href="#inicio" data-route="home" data-nav="home">Inicio</a>
+      <a href="#noticias" data-route="news" data-nav="news">Noticias</a>
+      <a href="#artistas" data-route="artists" data-nav="artists">Artistas</a>
+      <a href="#coberturas" data-nav="coverage">Coberturas</a>
+      <a href="#cultural" data-nav="culture">Cultural</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-btn" type="button" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m1.35-5.15a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" /></svg>
+      </button>
+      <a class="account-btn" href="#login" data-route="login">Iniciar sesi&oacute;n</a>
+    </div>
+  </header>
+
+  <section class="search-panel" aria-label="Buscador" aria-hidden="true">
+    <div class="search-box">
+      <label for="siteSearch">Buscar en CMTV</label>
+      <div class="search-row">
+        <input id="siteSearch" type="search" placeholder="Noticias, artistas, lanzamientos..." autocomplete="off" />
+        <button class="search-close" type="button" aria-label="Cerrar busqueda">×</button>
+      </div>
+      <div class="search-results" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <main>
+    <section class="view home-view is-active" data-view="home">
+      <section class="top-grid">
+        <article class="hero-card">
+          <div class="hero-copy">
+            <p class="eyebrow">En tiempo real</p>
+            <h1>Toda la actualidad de la m&uacute;sica Argentina.</h1>
+            <p class="hero-subtitle">Noticias, lanzamientos, coberturas y eventos al instante.</p>
+            <a class="primary-btn" href="#noticias" data-route="news">Explorar noticias<span aria-hidden="true"></span></a>
+            <div class="hero-dots" aria-label="Diapositivas del inicio">
+              <button class="active" type="button" aria-label="Ver imagen 1"></button>
+              <button type="button" aria-label="Ver imagen 2"></button>
+              <button type="button" aria-label="Ver imagen 3"></button>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <img class="hero-img active" src="imagenes/imagenhero1.png" alt="" />
+            <img class="hero-img" src="imagenes/imagenhero2.png" alt="" />
+            <img class="hero-img" src="imagenes/imagenhero3.png" alt="" />
+          </div>
+        </article>
+        <aside class="panel events-panel">
+          <h2>Pr&oacute;ximos eventos</h2>
+          <div class="event-list">
+            <article class="event-item"><time><strong>29</strong><span>May</span></time><div><h3>Los Piojos.</h3><p>Estadio River Plate.</p><p>Buenos Aires.</p></div><button type="button">+</button></article>
+            <article class="event-item"><time><strong>6</strong><span>Jun</span></time><div><h3>Los Fundamentalistas del Aire...</h3><p>Predio Ferial.</p><p>Comodoro Rivadavia.</p></div><button type="button">+</button></article>
+            <article class="event-item"><time><strong>18</strong><span>Jun</span></time><div><h3>Wos</h3><p>Estadio Velez Sarfield.</p><p>Buenos Aires.</p></div><button type="button">+</button></article>
+            <article class="event-item"><time><strong>7</strong><span>Jul</span></time><div><h3>Viejas Locas.</h3><p>Movistar Arena.</p><p>Buenos Aires.</p></div><button type="button">+</button></article>
+          </div>
+        </aside>
+      </section>
+
+      <section class="middle-grid">
+        <article class="news-section">
+          <div class="section-heading"><h2>Noticias minuto a minuto</h2><a href="#noticias" data-route="news">Ver todas</a></div>
+          <div class="news-layout">
+            <article class="featured-news">
+              <img src="imagenes/imagennoticiashome.png" alt="Babasonicos" />
+              <div><h3>Babasonicos anuncia &ldquo;Cuerpos Vol.1&rdquo;, su nuevo &aacute;lbum de estudio.</h3><p>La banda confirmo el lanzamiento para junio y present&oacute; el primer adelanto.</p><a href="#">Leer m&aacute;s</a></div>
+            </article>
+            <div class="ticker-list">
+              <article><time>11:45</time><p>Nuevo show de Airbag en el Luna Park.</p></article>
+              <article><time>12:38</time><p>Fallece Carlos &ldquo;Indio&rdquo; Solari a los 77 a&ntilde;os.</p></article>
+              <article><time>15:04</time><p>Soda Stereo &ldquo;Ecos&rdquo; anuncia nuevas fechas.</p></article>
+              <article><time>17:54</time><p>Las Pelotas lanz&oacute; su nuevo disco &ldquo;Sin Piel&rdquo;.</p></article>
+              <article><time>20:46</time><p>Los Enanitos Verdes regraban &ldquo;Soy&rdquo;.</p></article>
+            </div>
+          </div>
+        </article>
+        <aside class="panel agenda-panel">
+          <h2>Mi agenda</h2>
+          <article class="agenda-item"><svg viewBox="0 0 24 24"><path d="M7 2v4M17 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z" /><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01" /></svg><div><p data-logged-text="Echa un vistazo a t&uacute;s eventos guardados.">Ingres&aacute; para ver los eventos que guardaste.</p><a href="#login" data-agenda-action>Acceder</a></div></article>
+          <article class="agenda-item"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM2 21a7 7 0 0 1 14 0" /><path d="M19 7v10M22 10h-3a3 3 0 1 0 3 3" /></svg><div><p data-logged-text="Echa un vistazo a t&uacute;s artistas guardados.">Ingres&aacute; para ver los artistas que guardaste.</p><a href="#login" data-agenda-action>Acceder</a></div></article>
+          <article class="agenda-item"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h3M8 13h8M8 17h8M15 9h1" /></svg><div><p data-logged-text="Echa un vistazo a t&uacute;s noticias guardadas.">Ingres&aacute; para ver las noticias que guardaste.</p><a href="#login" data-agenda-action>Acceder</a></div></article>
+        </aside>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading"><h2>Ultimos lanzamientos</h2><div class="section-arrows"><span></span><span></span></div></div>
+        <div class="release-grid">
+          <article class="release-card"><img src="imagenes/portada1.png" alt="" /><div><p>Album</p><h3>Damelo</h3><span>La Grecia</span><a href="#">Escuchar</a></div></article>
+          <article class="release-card"><img src="imagenes/portada2.png" alt="" /><div><p>Album</p><h3>Sigo esperando</h3><span>El Zar</span><a href="#">Escuchar</a></div></article>
+          <article class="release-card"><img src="imagenes/portada3.png" alt="" /><div><p>Album</p><h3>Shine</h3><span>Fito Paez</span><a href="#">Escuchar</a></div></article>
+          <article class="release-card"><img src="imagenes/portada4.png" alt="" /><div><p>Album</p><h3>Excusa</h3><span>Las Pastillas del Abuelo</span><a href="#">Escuchar</a></div></article>
+          <article class="release-card"><img src="imagenes/portada5.png" alt="" /><div><p>Album</p><h3>X unas llantas</h3><span>Trueno</span><a href="#">Escuchar</a></div></article>
+        </div>
+      </section>
+
+      <section class="content-section artists-section">
+        <div class="section-heading"><h2>No te pierdas nada</h2><div class="section-arrows"><span></span><span></span></div></div>
+        <div class="artist-grid">
+          <article class="artist-card"><img src="imagenes/ellipse1.png" alt="" /><h3>Emme</h3><a href="#">Seguir</a></article>
+          <article class="artist-card"><img src="imagenes/ellipse2.png" alt="" /><h3>Lali</h3><a href="#">Seguir</a></article>
+          <article class="artist-card"><img src="imagenes/ellipse3.png" alt="" /><h3>Wos</h3><a href="#">Seguir</a></article>
+          <article class="artist-card"><img src="imagenes/ellipse4.png" alt="" /><h3>Ramma</h3><a href="#">Seguir</a></article>
+          <article class="artist-card"><img src="imagenes/ellipse5.png" alt="" /><h3>Trueno</h3><a href="#">Seguir</a></article>
+        </div>
+      </section>
+    </section>
+
+    <section class="view login-view" data-view="login">
+      <div class="login-shell">
+        <section class="login-intro">
+          <p>Bienvenido de nuevo</p>
+          <h1>Inici&aacute; sesi&oacute;n y viv&iacute; toda la experiencia CMTV.</h1>
+          <div class="login-benefits">
+            <article><svg viewBox="0 0 24 24"><path d="M7 2v4M17 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14H3V6a2 2 0 0 1 2-2Z" /><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01" /></svg><div><h3>Guard&aacute; tus eventos</h3><span>y nunca te pierdas nada.</span></div></article>
+            <article><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM2 21a7 7 0 0 1 14 0" /><path d="M19 7v10M22 10h-3a3 3 0 1 0 3 3" /></svg><div><h3>Segu&iacute; a tus artistas</h3><span>favoritos y enterate primero.</span></div></article>
+            <article><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h3M8 13h8M8 17h8M15 9h1" /></svg><div><h3>Recib&iacute; noticias</h3><span>exclusivas y recomendadas.</span></div></article>
+          </div>
+        </section>
+        <form class="login-card">
+          <h2>Iniciar sesi&oacute;n</h2>
+          <label>E-mail<input type="email" placeholder="ejemplo@mail.com" /></label>
+          <label>Contrase&ntilde;a<input type="password" placeholder="Tu contrase&ntilde;a" /></label>
+          <div class="login-row"><label class="remember"><input type="checkbox" /> Recordarme</label><a href="#">¿Olvidaste tu contrase&ntilde;a?</a></div>
+          <button class="login-submit" type="submit">Iniciar sesi&oacute;n</button>
+          <div class="continue"><span></span><p>O continuar con</p><span></span></div>
+          <div class="oauth"><button type="button">Google</button><button type="button">Apple</button></div>
+          <p class="signup">¿No ten&eacute;s cuenta?</p>
+          <a class="create-account" href="#">Crear cuenta</a>
+        </form>
+      </div>
+    </section>
+
+    <section class="view listing-view news-page" data-view="news">
+      <h1>Noticias</h1>
+      <div class="filters" data-news-filters><button class="active" data-filter="all">Todas</button><button data-filter="lanzamientos">Lanzamientos</button><button data-filter="conciertos">Conciertos</button><button data-filter="entrevistas">Entrevistas</button><button data-filter="industria">Industria</button></div>
+      <div class="two-col">
+        <div class="news-cards">
+          <article class="wide-news-card" data-category="lanzamientos" data-title="Babasonicos anuncia Cuerpos Vol.1 su nuevo album de estudio" data-search="babasonicos lanzamientos cuerpos vol 1 album estudio"><img src="imagenes/noticia1.png" alt="" /><div><p>Lanzamientos</p><h2>Babasonicos anuncia &ldquo;Cuerpos Vol.1&rdquo;, su nuevo &aacute;lbum de estudio.</h2><span>La banda confirm&oacute; lanzamiento para junio y present&oacute; el primer adelanto.</span><small>Hace 1 hora</small><a href="#">Leer m&aacute;s</a></div><i></i></article>
+          <article class="wide-news-card" data-category="conciertos" data-title="La Renga dara un show en el Estadio Unico de La Plata" data-search="la renga conciertos estadio unico la plata entradas ticketek"><img src="imagenes/noticia2.png" alt="" /><div><p>Conciertos</p><h2>La Renga dar&aacute; un show en el Estadio &Uacute;nico de La Plata.</h2><span>Las entradas estan disponibles hasta la fecha en ticketek.</span><small>Hace 2 horas</small><a href="#">Leer m&aacute;s</a></div><i></i></article>
+          <article class="wide-news-card" data-category="entrevistas" data-title="Rodrigo Manigot anuncio su salida de Ella Es Tan Cargosa" data-search="rodrigo manigot entrevistas ella es tan cargosa salida"><img src="imagenes/noticia3.png" alt="" /><div><p>Entrevistas</p><h2>Rodrigo Manigot anunci&oacute; su salida de Ella Es Tan Cargosa</h2><span>La noticia sorprendi&oacute; a sus seguidores.</span><small>Hace 3 horas</small><a href="#">Leer m&aacute;s</a></div><i></i></article>
+        </div>
+        <aside class="side-stack">
+          <section class="side-panel most-seen"><div><h2>Lo m&aacute;s visto hoy</h2><a href="#">Ver todas</a></div><ol><li><b>01</b><span>Babasonicos anuncia &ldquo;Cuerpos Vol.1&rdquo;, su nuevo &aacute;lbum de estudio.</span></li><li><b>02</b><span>Airbag agrega nuevas fechas en el Luna Park por entradas agotadas.</span></li><li><b>03</b><span>Trueno: &quot;La m&uacute;sica es mi forma de entender el mundo&quot;.</span></li><li><b>04</b><span>La m&uacute;sica en vivo mueve m&aacute;s de $250.000 millones en la Argentina.</span></li><li><b>05</b><span>Los Fundamentalistas del Aire Acondicionado lanzan nueva versi&oacute;n de &quot;El Mat&oacute;&quot;.</span></li></ol></section>
+          <section class="side-panel week-release"><h2>Lanzamiento de la semana</h2><img src="imagenes/noticia1.png" alt="" /><p>Lanzamientos</p><h3>Babasonicos lanza &quot;Cuerpos Vol.1&quot; y gira nacional 2025.</h3><a href="#">Leer m&aacute;s</a></section>
+        </aside>
+      </div>
+      <div class="pagination"><button class="active">1</button><button>2</button><button>3</button><button>Siguiente <span></span></button></div>
+    </section>
+
+    <section class="view listing-view artists-page" data-view="artists">
+      <h1>Artistas</h1>
+      <div class="artists-layout">
+        <div class="artist-catalog">
+          <article class="catalog-card" data-genre="trap" data-year="2024" data-province="buenos-aires" data-title="Trueno" data-search="trueno trap hip hop buenos aires"><img src="imagenes/artista1.png" alt="" /><div><h2>Trueno</h2><p>Trap / Hip hop</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rock" data-year="2025" data-province="buenos-aires" data-title="Babasonicos" data-search="babasonicos rock alternativo buenos aires"><img src="imagenes/artista2.png" alt="" /><div><h2>Babasonicos</h2><p>Rock alternativo</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rap" data-year="2024" data-province="buenos-aires" data-title="Wos" data-search="wos rap hip hop buenos aires"><img src="imagenes/artista3.png" alt="" /><div><h2>Wos</h2><p>Rap / Hip hop</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rock" data-year="2025" data-province="buenos-aires" data-title="Airbag" data-search="airbag rock buenos aires"><img src="imagenes/artista4.png" alt="" /><div><h2>Airbag</h2><p>Rock</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="trap" data-year="2024" data-province="buenos-aires" data-title="Lit Killah" data-search="lit killah trap hip hop buenos aires"><img src="imagenes/artista5.png" alt="" /><div><h2>Lit Killah</h2><p>Trap / Hip hop</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rock" data-year="2025" data-province="buenos-aires" data-title="Las Pelotas" data-search="las pelotas rock buenos aires"><img src="imagenes/artista6.png" alt="" /><div><h2>Las Pelotas</h2><p>Rock</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="trap" data-year="2024" data-province="buenos-aires" data-title="Dillom" data-search="dillom trap hip hop buenos aires"><img src="imagenes/artista7.png" alt="" /><div><h2>Dillom</h2><p>Trap / Hip hop</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rock" data-year="2025" data-province="buenos-aires" data-title="La Renga" data-search="la renga rock buenos aires"><img src="imagenes/artista8.png" alt="" /><div><h2>La Renga</h2><p>Rock</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rock" data-year="2025" data-province="buenos-aires" data-title="Viejas Locas" data-search="viejas locas rock buenos aires"><img src="imagenes/artista9.png" alt="" /><div><h2>Viejas Locas</h2><p>Rock</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rock" data-year="2024" data-province="buenos-aires" data-title="El Kuelgue" data-search="el kuelgue rock buenos aires"><img src="imagenes/artista10.png" alt="" /><div><h2>El Kuelgue</h2><p>Rock</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="rock" data-year="2026" data-province="buenos-aires" data-title="Los Piojos" data-search="los piojos rock buenos aires"><img src="imagenes/artista11.png" alt="" /><div><h2>Los Piojos</h2><p>Rock</p><span>Buenos Aires, Argentina</span><a>Ver perfil</a><i></i></div></article>
+          <article class="catalog-card" data-genre="trap" data-year="2024" data-province="santa-fe" data-title="Nicki Nicole" data-search="nicki nicole trap r and b rosario santa fe"><img src="imagenes/artista12.png" alt="" /><div><h2>Nicki Nicole</h2><p>Trap / R&amp;B</p><span>Rosario, Argentina</span><a>Ver perfil</a><i></i></div></article>
+        </div>
+        <aside class="side-stack">
+          <section class="side-panel filter-panel"><h2>Filtrar artistas</h2><label>G&eacute;nero<select id="genreFilter"><option value="all">Todos</option><option value="rock">Rock</option><option value="trap">Trap / Hip hop</option><option value="rap">Rap</option></select></label><label>A&ntilde;o<select id="yearFilter"><option value="all">Todos</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select></label><label>Provincia<select id="provinceFilter"><option value="all">Todas</option><option value="buenos-aires">Buenos Aires</option><option value="santa-fe">Santa Fe</option></select></label><button type="button" id="clearArtistFilters">Limpiar filtros</button></section>
+          <section class="side-panel featured-artist"><h2>Artista destacado</h2><img src="imagenes/artistadestacado.png" alt="" /><h3>Trueno</h3><p>Trap / Hip hop</p><span>El referente del trap argentino que llev&oacute; su m&uacute;sica a todo el mundo.</span><a>Ver perfil</a></section>
+        </aside>
+      </div>
+      <div class="pagination"><button class="active">1</button><button>2</button><button>3</button><button>Siguiente <span></span></button></div>
+    </section>
+
+    <section class="view profile-view" data-view="profile">
+      <h1>Tu agenda</h1>
+      <section class="profile-top">
+        <aside class="profile-card">
+          <div class="avatar"><button type="button">⌕</button></div><h2>Juan P&eacute;rez</h2><p>@juanperez</p><span>Amante de la m&uacute;sica, el arte y la cultura. Siempre en busca de nuevas experiencias.</span><small>✉ juanperez@mail.com</small><small>⌾ Buenos Aires, Argentina</small><small>Se uni&oacute; en enero de 2024</small>
+          <div class="stats"><div>Eventos<b>12</b></div><div>Noticias<b>28</b></div><div>Artistas<b>15</b></div></div><button class="logout" type="button">⇱ Cerrar sesi&oacute;n</button>
+        </aside>
+        <section class="saved-news saved-panel"><div class="saved-head"><h2>Noticias guardadas</h2><a>Ver todos</a></div><div class="saved-news-grid">
+          <article><img src="imagenes/noticiaguardada1.png" alt="" /><h3>Babasonicos anuncia &ldquo;Cuerpos Vol.1&rdquo;, su nuevo &aacute;lbum de estudio.</h3><i></i></article>
+          <article><img src="imagenes/noticiaguardada2.png" alt="" /><h3>La Renga dar&aacute; un show en el Estadio &Uacute;nico de La Plata.</h3><i></i></article>
+          <article><img src="imagenes/noticiaguardada3.png" alt="" /><h3>Rodrigo Manigot anunci&oacute; su salida de Ella Es Tan Cargosa</h3><i></i></article>
+          <article><img src="imagenes/noticiaguardada4.png" alt="" /><h3>Wos hizo vibrar el Movistar Arena con un show arrollador</h3><i></i></article>
+        </div></section>
+      </section>
+      <section class="saved-panel"><div class="saved-head"><h2>Eventos guardados</h2><a>Ver todos</a></div><div class="saved-events-grid">
+        <article><img src="imagenes/eventoguardado1.png" alt="" /><time><b>29</b><span>May</span></time><h3>Los Piojos</h3><p>Estadio River Plate<br>Buenos Aires<br>29 de mayo, 2026 - 21:00hs</p><i></i></article>
+        <article><img src="imagenes/eventoguardado2.png" alt="" /><time><b>6</b><span>Jun</span></time><h3>Los Fundamen...</h3><p>Predio Ferial<br>Comodoro Rivadavia<br>26 de junio, 2026 - 22:00hs</p><i></i></article>
+        <article><img src="imagenes/eventoguardado3.png" alt="" /><time><b>18</b><span>Jun</span></time><h3>Wos</h3><p>Estadio Velez Sarfield<br>Buenos Aires<br>18 de junio, 2026 - 20:00hs</p><i></i></article>
+        <article><img src="imagenes/eventoguardado4.png" alt="" /><time><b>7</b><span>Jul</span></time><h3>Viejas Locas</h3><p>Movistar Arena<br>Buenos Aires<br>7 de julio, 2026 - 21:00hs</p><i></i></article>
+      </div></section>
+      <section class="saved-panel my-artists"><h2>Mis artistas:</h2><div class="my-artist-grid">
+        <article><img src="imagenes/artistaguardado1.png" alt="" /><h3>Airbag</h3><a>Ver perfil</a></article>
+        <article><img src="imagenes/artistaguardado2.png" alt="" /><h3>Virus</h3><a>Ver perfil</a></article>
+        <article><img src="imagenes/artistaguardado3.png" alt="" /><h3>Sumo</h3><a>Ver perfil</a></article>
+        <article><img src="imagenes/artistaguardado4.png" alt="" /><h3>Duki</h3><a>Ver perfil</a></article>
+        <article><img src="imagenes/artistaguardado5.png" alt="" /><h3>Emilia</h3><a>Ver perfil</a></article>
+      </div></section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-logo" href="#inicio" data-route="home" aria-label="CMTV inicio"><img src="imagenes/logofooter.png" alt="CMTV" /></a>
+    <p>&copy;2026 CMTV. Todos los derechos reservados.</p>
+    <div class="socials" aria-label="Redes sociales">
+      <a href="https://www.instagram.com/cmtvargentina/?hl=es" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+      <a href="https://www.youtube.com/user/CMTVmusica" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22 12s0-4-1-5c-1-1-3-1-9-1s-8 0-9 1c-1 1-1 5-1 5s0 4 1 5 3 1 9 1 8 0 9-1c1-1 1-5 1-5Z" /><path d="m10 9 5 3-5 3Z" /></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 4 20" /></svg></a>
+      <a href="https://www.tiktok.com/@cmtv.com.ar" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3v11.2a4.2 4.2 0 1 1-4.2-4.2M14 3c1 3 2.8 4.6 6 4.8" /></svg></a>
+      <a href="#" aria-label="Twitch"><svg viewBox="0 0 24 24"><path d="M5 3h16v11l-5 5h-4l-3 3v-3H5z" /><path d="M10 8v5M15 8v5" /></svg></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
